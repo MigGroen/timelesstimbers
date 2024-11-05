@@ -1,0 +1,547 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  color: #fff;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-links li {
+  margin: 0 1rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffd700;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px;
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #182848;
+    flex-direction: column;
+    text-align: center;
+    display: none;
+  }
+
+  .navbar-links li {
+    margin: 1rem 0;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar.active .navbar-links {
+    display: flex;
+  }
+
+  /* Toggle Icon Animation */
+  .navbar.active .navbar-toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .navbar.active .navbar-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar.active .navbar-toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+nav {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    position: sticky;
+    
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #5f3d0b84;
+}
+
+/* Welcome Section */
+#welcome {
+    height: 100vh;
+    background: #333;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+#welcome .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#welcome .slider img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.welcome-text {
+    position: relative;
+    z-index: 2;
+    color: whitesmoke;
+    font-style: italic;
+}
+
+.welcome-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.welcome-text p {
+    font-size: 1.5em;
+}
+
+/* About Section */
+#about {
+    padding: 80px 20px;
+    background: linear-gradient(45deg, #000000, rgb(45, 45, 45));
+    text-align: center;
+    color: #f4f4f4;
+}
+
+#about h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+#services {
+    padding: 80px 20px;
+    text-align: center;
+     background: linear-gradient(45deg, #404040, rgb(0, 0, 0));
+     color: aliceblue;
+}
+
+#services h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+     
+}
+
+.service-item {
+    width: 30%;
+    margin-bottom: 20px;
+
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 15px;
+}
+
+#howwework {
+    padding: 80px 20px;
+    text-align: center;
+     background: linear-gradient(45deg, #404040, rgb(0, 0, 0));
+     color: aliceblue;
+}
+
+.howwework-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+     
+}
+
+.howwework-item {
+    width: 30%;
+    margin-bottom: 20px;
+
+}
+
+.howwework-item img{
+    width: 50%;
+}
+/* Get a Quote Section */
+#quote {
+    padding: 80px 20px;
+    background: linear-gradient(45deg, #8b8b8b, rgb(0, 0, 0));
+    text-align: center;
+    color: #ffffff;
+}
+
+#quote h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#quote form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#quote input, #quote textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 1.2em;
+}
+
+#quote button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+}
+
+#quote button:hover {
+    background-color: #444;
+}
+
+/* Meet the Team Section */
+#team {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #868686;
+}
+
+#team h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+
+.team-list {
+    display: block;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.team-member1 img {
+    width: 60%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.team-member2 img {
+    width: 30%;
+    height: auto;
+    margin: 20px;
+}
+
+.team-member3 img {
+    width: 30%;
+    height: auto;
+    margin: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Projects Section */
+#projects {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ffffff, #868686, #484848, #000000); 
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.project-slider-container {
+    position: relative;
+    width: 60%;
+    overflow: hidden;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+
+.project-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.project-slide img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-slide img:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    z-index: 99;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-size: 1.2em;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+
+
+    #welcome .welcome-text h1 {
+        font-size: 2em;
+    }
+
+
+    #welcome .welcome-text p {
+        font-size: 1.2em;
+    }
+
+    #about h2, #about p, .service-item p, #projects h2, #services {
+        font-size: 13px;
+    }
+
+
+    #quote input, #quote textarea {
+        font-size: 1em;
+    }
+    
+    #team {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #868686;
+}
+
+#team h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+
+.team-list {
+    display: block;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.team-member1 img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.team-member2 img {
+    width: 60%;
+    height: auto;
+    margin: 20px;
+}
+
+.team-member3 img {
+    width: 60%;
+    height: auto;
+    margin: 20px;
+}
+
+.team-member h3 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 1.2em;
+}
+   
+
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+/* When the element becomes visible, this class is added */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

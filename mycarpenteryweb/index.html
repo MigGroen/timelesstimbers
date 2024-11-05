@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carpentry Business</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<style>
+        /* Optional: Make the map full width or control the size */
+        iframe {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- Welcome Section -->
+    <section id="welcome">
+        <div class="overlay"></div>
+        <div class="slider">
+            <div class="slide">
+                <img src="./images/slideshow1.jpg" alt="Carpentry Image 1">
+            </div>
+            <div class="slide">
+                <img src="./images/slideshow2.jpg" alt="Carpentry Image 2">
+            </div>
+            <div class="slide">
+                <img src="./images/slideshow3.jpg" alt="Carpentry Image 3">
+            </div>
+        </div>
+        <div class="welcome-text">
+            <h1>Welcome to Timeless Timbers</h1>
+            <p>Creating quality woodwork for your home</p>
+        </div>
+    </section>
+
+       <!-- Navbar -->
+       <nav class="navbar">
+       <div class="navbar-brand">Timeless Timber</div>
+        <ul class="navbar-links">
+            <li><a href="#welcome">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#howwework">How We Work</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#quote">Get a Quote</a></li>
+            <li><a href="#team">Meet the Team</a></li>
+        </ul>
+          <div class="navbar-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    </nav>
+  <div class="fade-in">
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+
+        <h1>TIMELESS TIMBERS</h1>
+        <p>Your professional carpenters that specialize in Kitchens, Bathrooms, Bedrooms, Carpentry and Custom Made Furniture. Timeless Timbers is an established company in Stellenbosch that will not compromise on excellence. Our team takes pride in our quality workmanship. We strive to leave a lasting impression for our services and craftsmanship. Please feel free to browse through our website that will provide you with a glance of the creative designs we have installed. Whether you are renovating or building, Timeless Timbers can design and install the product of your dreams using A-grade materials. Making your experience a pleasant one.</p>
+    </section>
+</div>
+
+  <div class="fade-in">
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Kitchen Cabinets and remodel</h3>
+                <p>Timeless Timbers, we specialize in crafting custom kitchen cabinets and providing expert carpentry for kitchen remodels that transform your space into the heart of your home. Our skilled craftsmen use premium materials and innovative designs to create cabinets that are both functional and beautiful, tailored to your style and needs. Whether you're updating a modern kitchen or enhancing a traditional one, our attention to detail and commitment to quality ensure a flawless finish that elevates your kitchen's aesthetic and value. Let us help you build the kitchen of your dreams.</p>
+            </div>
+            <div class="service-item">
+                <h3>Bath Cabinets and remodel</h3>
+                <p>
+                    At Timeless Timbers, we offer custom bath cabinets and remodel carpentry designed to enhance both the style and functionality of your bathroom. Our expert craftsmen create beautiful, durable cabinetry tailored to your space, using top-quality materials to ensure long-lasting results. Whether you're seeking a sleek, modern look or a more traditional design, we bring your vision to life with precision and care. Trust us to deliver a stunning bathroom transformation that combines elegance with practicality.</p>
+                </div>
+            <div class="service-item">
+                <h3> Custom Furniture</h3>
+                <p>At Timeless Timbers...</p>
+            </div>
+        </div>
+    </section>
+    </div>
+
+      <div class="fade-in">
+     <!-- how we work Section -->
+    <section id="howwework">
+        <h2>How We Work</h2>
+        <div class="howwework-list">
+            <div class="howwework-item">
+                <img src="./images/appointment.jpeg" alt="">
+                <h3>1.Appointment Booking</h3>
+                <p>Description...</p>
+            </div>
+            <div class="howwework-item">
+                <img src="./images/email.jpeg" alt="">
+                <h3>2.Design and Quote</h3>
+                <p>Description...</p>
+                </div>
+            <div class="howwework-item">
+                <img src="./images/document.jpg" alt="">
+                <h3>3.Technical Documentation</h3>
+                <p>Description...</p>
+            </div>
+              <div class="howwework-item">
+                <img src="./images/location.jpeg" alt="">
+                <h3>3.Installation Process</h3>
+                <p>Description...</p>
+            </div>
+              <div class="howwework-item">
+                <img src="./images/smile.jpeg" alt="">
+                <h3>5.Job Done!</h3>
+                <p>Description...</p>
+            </div>
+        </div>
+    </section>
+    </div>
+
+     <div class="fade-in">
+<!-- Projects Section -->
+<section id="projects">
+    <h1>Projects</h1>
+    <h4>DURBANVILLE HILLS</h4>
+    <div class="project-slider-container">
+        <button class="prev" data-slider="slider1">&#10094;</button>
+        <div class="project-slider-container" id="slider1">
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 1" class="project-thumbnail" data-project="Project 1 Description">
+            </div>
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 2" class="project-thumbnail" data-project="Project 2 Description">
+            </div>
+            
+        </div>
+        <button class="next" data-slider="slider1">&#10095;</button>
+    </div>
+</section>
+     
+<!-- Modal for Project Info -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modalImage" src="" alt="Project Image">
+        <p id="modalText"></p>
+    </div>
+</div>
+
+<!-- Projects Section -->
+<section id="projects">
+    <h4>HUGEUNOT MUSEUM FRANSCHOEK</h4>
+    <div class="project-slider-container">
+        <button class="prev" data-slider="slider2">&#10094;</button>
+        <div class="project-slider-container" id="slider2">
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 1" class="project-thumbnail" data-project="Project 1 Description">
+            </div>
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 2" class="project-thumbnail" data-project="Project 2 Description">
+            </div>
+            
+        </div>
+        <button class="next" data-slider="slider2">&#10095;</button>
+    </div>
+</section>
+
+<!-- Modal for Project Info -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modalImage" src="" alt="Project Image">
+        <p id="modalText"></p>
+    </div>
+</div>
+
+<!-- Projects Section -->
+<section id="projects">
+    <h4>HOUSE BAHLMANN</h4>
+    <div class="project-slider-container">
+        <button class="prev" data-slider="slider3">&#10094;</button>
+        <div class="project-slider-container" id="slider3">
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 1" class="project-thumbnail" data-project="Project 1 Description">
+            </div>
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 2" class="project-thumbnail" data-project="Project 2 Description">
+            </div>
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 3" class="project-thumbnail" data-project="Project 3 Description">
+            </div>
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 4" class="project-thumbnail" data-project="Project 4 Description">
+            </div>
+        </div>
+        <button class="next" data-slider="slider3">&#10095;</button>
+    </div>
+</section>
+
+<!-- Modal for Project Info -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modalImage" src="" alt="Project Image">
+        <p id="modalText"></p>
+    </div>
+</div>
+
+
+<!-- Projects Section -->
+<section id="projects">
+    <h4>HOUSE BOOYENS</h4>
+    <div class="project-slider-container">
+        <button class="prev" data-slider="slider4">&#10094;</button>
+        <div class="project-slider-container" id="slider4">
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 1" class="project-thumbnail" data-project="Project 1 Description">
+            </div>
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 2" class="project-thumbnail" data-project="Project 2 Description">
+            </div>
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 3" class="project-thumbnail" data-project="Project 3 Description">
+            </div>
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 4" class="project-thumbnail" data-project="Project 4 Description">
+            </div>
+            
+        </div>
+        <button class="next" data-slider="slider4">&#10095;</button>
+    </div>
+</section>
+
+<!-- Modal for Project Info -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modalImage" src="" alt="Project Image">
+        <p id="modalText"></p>
+    </div>
+</div>
+
+
+<!-- Projects Section -->
+<section id="projects">
+    <h4>HOUSE CECILIA</h4>
+    <div class="project-slider-container">
+        <button class="prev" data-slider="slider5">&#10094;</button>
+        <div class="project-slider-container" id="slider5">
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 1" class="project-thumbnail" data-project="Project 1 Description">
+            </div>
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 2" class="project-thumbnail" data-project="Project 2 Description">
+            </div>
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 3" class="project-thumbnail" data-project="Project 3 Description">
+            </div>
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 4" class="project-thumbnail" data-project="Project 4 Description">
+            </div>
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 5" class="project-thumbnail" data-project="Project 5 Description">
+            </div>
+            <div class="project-slide">
+                <img src="./images/OIP.jpeg" alt="Project 6" class="project-thumbnail" data-project="Project 6 Description">
+            </div>
+        </div>
+        <button class="next" data-slider="slider5">&#10095;</button>
+    </div>
+</section>
+
+<!-- Modal for Project Info -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modalImage" src="" alt="Project Image">
+        <p id="modalText"></p>
+    </div>
+</div>
+</div>
+    <!-- Get a Quote Section -->
+    <section id="quote">
+        <h2>Get a Quote</h2>
+        <p>Tell us about your project, and we'll provide you with a custom quote.</p>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Project Details" required></textarea>
+            <button type="submit">Submit</button>
+        </form><br>
+
+        <h3>Contact Info</h3>
+       <p> Tel: 021 882 9240</p><br>
+
+<p>Email: info@timelesstimbers.co.za</p>
+<p> George Blake Street </p>
+<p>Unit 1A</p>
+<p>Plankenbrug</p>
+<p>Stellenbosch</p>
+<hr>
+<h2 style="text-align: center;">Our Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.504411007064!2d18.8514152!3d-33.928152499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdb2896f7031a9%3A0xc9873c1b2c5abb93!2sTimeless%20Timbers!5e0!3m2!1sen!2sza!4v1730714248606!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+    <!-- Meet the Team Section -->
+    <section id="team">
+        <h2>Meet the Team</h2>
+        <div class="team-list">
+            <div class="team-member1">
+                <img src="./images/timeless timbers team.webp" alt="Team Member 1">
+                <h3>Master Carpenters</h3>
+                
+            </div>
+             <div class="team-member2">
+                <img src="./images/theunis owner.webp" alt="Team Member 1">
+                <h3>THEUNIS ERWEE</h3>
+                <p>PROPRIETOR</p>
+                <p>Theunis started Timeless Timbers in 2008, it has since grown to become the company you see today. You will most likely see him around on sites ensuring that the work being delivered and installed is up to standard</p>
+                
+            </div>
+             <div class="team-member3">
+                <img src="./images/receptionist.webp" alt="Team Member 1">
+                <h3>MEGAN BALTERS</h3>
+                <p>RECEPTIONIST</p>
+                <p>The lovely lady you will be hearing on the other side of the line is Megan. She will be able to direct you through to one of the designers or Theunis.</p>
+                
+            </div>
+        </div>
+    </section>
+    <hr>
+    
+    <!-- Footer -->
+    <footer>
+        <p>Email: info@timelesstimbers.co.za</p>
+        <p>Number: 021 882 9240</p>
+        <p>&copy; 2024 Timeless Timbers. All rights reserved.</p>
+    </footer>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="timelesstimbers"
+  agent-id="20990526-1b35-41b1-b152-7310bca1ba68"
+  language-code="en"
+></df-messenger>
+    <script src="script.js"></script>
+    
+
+</body>
+
+</html>
